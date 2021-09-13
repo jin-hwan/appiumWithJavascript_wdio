@@ -1,3 +1,4 @@
+let { join } = require('path')
 exports.config = {
     //
     // ====================
@@ -67,7 +68,7 @@ exports.config = {
         // excludeDriverLogs: ['bugreport', 'server'],
         platformName: 'Android',
         'appium:deviceName': 'Pixel 2',
-        'appium:app': '/Users/sia/SweetDream/appium/ApiDemos-debug.apk'
+        'appium:app': join(process.cwd(), './ApiDemos-debug.apk')
     }],
     //
     // ===================

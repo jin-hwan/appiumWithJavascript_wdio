@@ -46,3 +46,8 @@
 ## Appium + wdio
 
 - npm install @wdio/appium-service --save-dev
+
+## 실행
+
+- npx wdio run wdio.conf.js : 모바일 실행 (Android)
+- npx wdio run pc.conf.js : 웹 실행 (chrome)

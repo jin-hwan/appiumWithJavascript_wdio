@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jin-hwan/appium#readme",
   "dependencies": {
     "@wdio/cli": "^7.12.2",
+    "appium": "^1.21.0",
     "selenium-webdriver": "^4.0.0-rc-1"
   },
   "devDependencies": {
@@ -27,6 +28,8 @@
     "@wdio/mocha-framework": "^7.12.4",
     "@wdio/selenium-standalone-service": "^7.10.1",
     "@wdio/spec-reporter": "^7.10.1",
+    "@wdio/sync": "^7.12.5",
+    "chai": "^4.3.4",
     "chromedriver": "^93.0.1",
     "wdio-chromedriver-service": "^7.2.0"
   }

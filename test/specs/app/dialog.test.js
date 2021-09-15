@@ -21,10 +21,17 @@ describe('Dialog', () => {
 
     })
     it.only('Verify that the app adjust when orientation is switched', () => {
-        console.log(driver.getOrientation())
         driver.setOrientation('LANDSCAPE')
+        console.log(driver.getOrientation())
 
-        driver.pause(1000)
+        driver.pause(1000)   //ms
         driver.saveScreenshot('./screenshots/landscape.png')
+
+        dialog.appBtn.click()
+        driver.setOrientation('PORTRAIT')
+        console.log(driver.getOrientation())
+
+        driver.back()
+        driver.saveScreenshot('./screenshots/portrait.png')
     })
 })

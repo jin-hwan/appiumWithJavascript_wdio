@@ -20,4 +20,11 @@ describe('Dialog', () => {
         dialog.dialogOkBtn.click()
 
     })
+    it.only('Verify that the app adjust when orientation is switched', () => {
+        console.log(driver.getOrientation())
+        driver.setOrientation('LANDSCAPE')
+
+        driver.pause(1000)
+        driver.saveScreenshot('./screenshots/landscape.png')
+    })
 })

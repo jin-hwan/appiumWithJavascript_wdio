@@ -31,9 +31,10 @@ exports.config = {
     path: '/wd/hub',
     port: 4723,
     services: ['appium'],
+    // appium: { command: 'appium' },
     // services: ['chromedriver'],
     capabilities: [{
-        maxInstances: 5,
+        // maxInstances: 5,
         platformName: 'Android',
         deviceName: 'GalaxyS9',
         browserName: 'Chrome'

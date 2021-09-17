@@ -20,7 +20,8 @@ exports.config = {
         browserName: 'Chrome'
     }],
     maxInstances: 10,
-
+    coloredLogs: true,
+    screenshotPath: 'screenshots',
     // ===================
     // Test Configurations
     // ===================

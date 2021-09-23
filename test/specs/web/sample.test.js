@@ -1,30 +1,17 @@
+const MainPage = require('../../pageobjects/google.page')
 
-const { remote } = require('webdriverio');
+describe('Login', () => {
+    it.only('로그인 페이지 이동', async () => {
+        await MainPage.open()
+        await MainPage.searchTextbox.setValue('webdriverIO')
 
-describe('Sample', () => {
-    it('test', () => {
+        // await browser.url('https://google.com')
+        // const searchTextbox = await $('input[name="q"')
 
-
-        (async () => {
-            const browser = await remote({
-                logLevel: 'trace',
-                capabilities: {
-                    browserName: 'chrome'
-                }
-            })
-
-            await browser.url('https://duckduckgo.com')
-
-            const inputElem = await browser.$('#search_form_input_homepage')
-            await inputElem.setValue('WebdriverIO')
-
-            const submitBtn = await browser.$('#search_button_homepage')
-            await submitBtn.click()
-
-            console.log(await browser.getTitle()) // outputs: "Title is: WebdriverIO (Software) at DuckDuckGo"
-
-            await browser.deleteSession()
-        })().catch((e) => console.error(e))
+        // await browser.pause(3000)
+        // await searchTextbox.setValue('webdriverIO')
+        // await browser.back()
+        await browser.keys('Enter') //PC에서 동작함을 확인
 
     })
 })
